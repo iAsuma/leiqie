@@ -1,0 +1,10 @@
+.layui-nav .layui-this:after,.layui-nav-bar,.layui-nav-child dd.layui-this,.layui-nav-tree .layui-nav-bar,.layui-nav-tree .layui-nav-child a.layui-this,.layui-nav-tree .layui-nav-itemed:after{background:#348FD5;color:#fff}
+/*.layui-form-select dl dd.layui-this{background:#348FD5}*/
+.layui-btn{background:#348FD5;}
+
+/* 菜单展开和缩起 */
+.layui-side{z-index: 1000}
+.site-tree-mobile{box-shadow:0 0 10px #bdbdbd;background:#fff;border-radius:0 4px 4px 0;cursor:pointer;display:block!important;margin-top:-20px;position:fixed;z-index:999;top:50%;left:200px;height:38px;overflow:hidden;width:12px}
+.site-tree-mobile i{font-size:20px;color:#348FD5;position:relative;top:8px;left:-4px}
+.site-tree-mobile.blue{background:#348FD5;}
+.site-tree-mobile.blue i{color:#fff}
