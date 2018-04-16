@@ -1,11 +1,9 @@
- 
- 
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>雷切BMS - Layui</title>
+  <title>雷切BMS - 通用后台管理系统</title>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -21,26 +19,17 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
   <div class="layui-header">
-    <div class="layui-logo">雷切 通用后台</div>
+    <div class="layui-logo">雷切BMS</div>
+    <div class="asuma-head-ad">为极速开发而生</div>
     <!-- 头部区域（可配合layui已有的水平导航） -->
-    <ul class="layui-nav layui-layout-left">
+    <!-- <ul class="layui-nav layui-layout-left">
       <li class="layui-nav-item"><a href="">控制台</a></li>
-      <li class="layui-nav-item"><a href="">商品管理</a></li>
-      <li class="layui-nav-item"><a href="">用户</a></li>
-      <li class="layui-nav-item">
-        <a href="javascript:;">其它系统</a>
-        <dl class="layui-nav-child">
-          <dd><a href="">邮件管理</a></dd>
-          <dd><a href="">消息管理</a></dd>
-          <dd><a href="">授权管理</a></dd>
-        </dl>
-      </li>
-    </ul>
+    </ul> -->
     <ul class="layui-nav layui-layout-right">
       <li class="layui-nav-item">
         <a href="javascript:;">
           <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-          贤心
+          阿斯玛
         </a>
         <dl class="layui-nav-child">
           <dd><a href="">基本资料</a></dd>
@@ -55,7 +44,7 @@
     <div class="layui-side-scroll">
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-        <li class="layui-nav-item layui-nav-itemed">
+        <li class="layui-nav-item ">
           <a class="" href="javascript:;">所有商品</a>
           <dl class="layui-nav-child">
             <dd><a href="javascript:;">列表一</a></dd>
@@ -64,7 +53,7 @@
             <dd><a href="">超链接</a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item">
+        <li class="layui-nav-item layui-nav-itemed">
           <a href="javascript:;">解决方案</a>
           <dl class="layui-nav-child">
             <dd><a href="javascript:;">列表一</a></dd>
@@ -78,13 +67,14 @@
     </div>
   </div>
 
-  <div class="site-tree-mobile">
+  <div class="asuma-icon-item">
     <i class="iconfont icon-arrow-left"></i>
   </div>
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 20px;">
+    <div class="layui-container">
+      
       内容主体区域
       
       <br><br>
@@ -121,14 +111,13 @@ layui.use('element', function(){
   var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
-  console.log(location.hash);
   //左侧导航栏收缩功能动画效果
   var i = 0;
-  $('.site-tree-mobile').click(function(){
-    //这里定义一个全局变量来方便判断动画收缩的效果,也就是放在最外面
+  $('.asuma-icon-item').click(function(){
     $(this).toggleClass('blue');
     $(this).children('i').toggleClass('icon-arrow-right');
     $(this).children('i').toggleClass('icon-arrow-left');
+    //这里定义一个全局变量来方便判断动画收缩的效果,也就是放在最外面
     if(i==0){
       $(this).animate({left:'0px'});
       $(".layui-side").animate({width:'toggle'});
@@ -143,13 +132,6 @@ layui.use('element', function(){
       i--;
     }
   });
-
-  //左侧导航栏收缩提示
-  /*$('#animation-left-nav').hover(function(){
-    layer.tips('收缩左侧导航栏', '#animation-left-nav', {tips:[4,'#FF8000'],time:0});
-  },function(){
-    layer.closeAll('tips'); 
-  });*/
 </script>
 </body>
 </html>
