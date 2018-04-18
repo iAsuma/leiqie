@@ -1,3 +1,33 @@
+.asuma-head-ad{position:relative;left:200px;line-height:60px;color: rgba(255,255,255,.5)}
+
+/* 菜单展开和缩起 */
+.layui-bg-black{z-index: 1000}
+.asuma-icon-item{box-shadow:0 0 10px #bdbdbd;background:#fff;border-radius:0 4px 4px 0;cursor:pointer;display:block!important;margin-top:-20px;position:fixed;z-index:999;top:50%;left:200px;height:38px;overflow:hidden;width:12px}
+.asuma-icon-item i{font-size:20px;color:#348FD5;position:relative;top:8px;left:-4px}
+.asuma-icon-item.blue{background:#348FD5;}
+.asuma-icon-item.blue i{color:#fff}
+
+/* 子侧边 */
+.layui-side-child{width: 160px!important; left: 200px; bottom: 60px!important; border-right: 1px solid #eee; background-color: #fff;}
+.layui-side-child .layui-side-scroll{width: 170px;}
+.layui-side-child .layui-nav{padding: 10px 0; width: 160px; border-radius: 0; background: none}
+.layui-side-child .layui-nav-child{border-radius: 0;}
+.layui-side-child .layui-nav .layui-nav-title a, 
+.layui-side-child .layui-nav .layui-nav-title a:hover, 
+.layui-side-child .layui-nav-itemed>a{color: #666 !important;}
+.layui-side-child .layui-nav-itemed .layui-nav-child{margin-bottom: 10px; background: none !important;}
+.layui-side-child .layui-nav .layui-nav-item a{height: 30px; line-height: 30px; color: #666;}
+.layui-side-child .layui-nav .layui-nav-item a:hover{background: none !important;}
+.layui-side-child .layui-nav .layui-nav-child a{color: #999 !important;}
+.layui-side-child .layui-nav .layui-nav-more{display: none;}
+.layui-side-child .layui-nav-tree .layui-this, 
+.layui-side-child .layui-nav-tree .layui-this>a, 
+.layui-side-child .layui-nav-tree .layui-nav-child dd.layui-this, 
+.layui-side-child .layui-nav-tree .layui-nav-child dd.layui-this a{background: none; color: #5FB878 !important;}
+.layui-side-child .layui-nav .layui-nav-child a:hover{color: #009688 !important} 
+.layui-side-child .layui-nav-bar{background-color: #5FB878;}
+
+/* 框架css重写 */
 .layui-layout-admin .layui-logo{color: #348FD5;font-size: 22px;}
 .layui-nav .layui-this:after,.layui-nav-bar,.layui-nav-child dd .layui-this,.layui-nav-tree .layui-nav-bar,.layui-nav-tree .layui-nav-child a.layui-this,.layui-nav-tree .layui-nav-itemed:after{background:#348FD5;color:#fff}
 .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover{background-color:#348FD5;}
@@ -5,11 +35,3 @@
 .layui-btn{background:#348FD5;}
 
 .layui-container{margin: 0;padding: 20px;}
-.asuma-head-ad{position:relative;left:200px;line-height:60px;color: rgba(255,255,255,.5)}
-
-/* 菜单展开和缩起 */
-.layui-side{z-index: 1000}
-.asuma-icon-item{box-shadow:0 0 10px #bdbdbd;background:#fff;border-radius:0 4px 4px 0;cursor:pointer;display:block!important;margin-top:-20px;position:fixed;z-index:999;top:50%;left:200px;height:38px;overflow:hidden;width:12px}
-.asuma-icon-item i{font-size:20px;color:#348FD5;position:relative;top:8px;left:-4px}
-.asuma-icon-item.blue{background:#348FD5;}
-.asuma-icon-item.blue i{color:#fff}

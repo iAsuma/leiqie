@@ -28,7 +28,7 @@
     <ul class="layui-nav layui-layout-right">
       <li class="layui-nav-item">
         <a href="javascript:;">
-          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          <img src="http://t.cn/Rm1AbTC" class="layui-nav-img">
           阿斯玛
         </a>
         <dl class="layui-nav-child">
@@ -67,11 +67,32 @@
     </div>
   </div>
 
+  <style type="text/css">
+    .layui-body{overflow-y: scroll;left: 360px}
+  </style>
+  <div class="layui-side layui-side-child">
+    <div class="layui-side-scroll">
+      <ul class="layui-nav layui-nav-tree">
+        <li class="layui-nav-item">
+          <a href="">ces2</a>
+        </li>
+        <li class="layui-nav-item">
+          <a href="">ces22</a>
+        </li>
+        <li class="layui-nav-item layui-this">
+          <a href="">ces224</a>
+        </li>
+      </ul>
+      <hr>
+      <a href="">→</a>
+    </div>
+  </div>
+
   <div class="asuma-icon-item">
     <i class="iconfont icon-arrow-left"></i>
   </div>
   
-  <div class="layui-body">
+  <div class="layui-body layui-anim layui-anim-upbit">
     <!-- 内容主体区域 -->
     <div class="layui-container">
       
@@ -118,17 +139,29 @@ layui.use('element', function(){
     $(this).children('i').toggleClass('icon-arrow-right');
     $(this).children('i').toggleClass('icon-arrow-left');
     //这里定义一个全局变量来方便判断动画收缩的效果,也就是放在最外面
+    var side_len = $('body').find('.layui-side-child').length;
     if(i==0){
       $(this).animate({left:'0px'});
-      $(".layui-side").animate({width:'toggle'});
-      $(".layui-body").animate({left:'0px'});
+      $(".layui-bg-black").animate({width:'toggle'});
       $(".layui-footer").animate({left:'0px'});
+      
+      if(side_len > 0){
+        $(".layui-side-child").animate({left:'0px'});
+        $(".layui-body").animate({left:'160px'});
+      }else{
+        $(".layui-body").animate({left:'0px'});  
+      }
       i++;
     }else{
       $(this).animate({left:'200px'});
-      $(".layui-side").animate({width:'toggle'});
-      $(".layui-body").animate({left:'200px'});
+      $(".layui-bg-black").animate({width:'toggle'});
       $(".layui-footer").animate({left:'200px'});
+      if(side_len > 0){
+        $(".layui-side-child").animate({left:'200px'});
+        $(".layui-body").animate({left:'360px'});
+      }else{
+        $(".layui-body").animate({left:'200px'});
+      }
       i--;
     }
   });
