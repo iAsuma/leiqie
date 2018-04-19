@@ -75,8 +75,11 @@
   <style type="text/css">
     .layui-body{overflow-y: scroll;left: 360px}
   </style>
-  <div class="icon-arrow-mid">
+  <div class="icon-arrow-mid icon-arrow-mid-1">
     <i class="iconfont icon-xishuangjiantouL arrow-btn" ></i>
+  </div>
+  <div class="icon-arrow-mid icon-arrow-mid-2" style="display: none;">
+    <i class="iconfont icon-xishuangjiantouR arrow-btn" ></i>
   </div>
   <div class="layui-side layui-side-child">
     <div class="layui-side-scroll">
@@ -143,15 +146,19 @@ layui.use('element', function(){
     $(this).toggleClass('blue');
     $(this).children('i').toggleClass('icon-arrow-right');
     $(this).children('i').toggleClass('icon-arrow-left');
+
     var side_len = $('body').find('.layui-side-child').length;
+    var side_hidden = $('body').find('.layui-side-child').is(':visible');
 
     if(i==0){
       $(this).animate({left:'0px'});
       $(".layui-bg-black").animate({width:'toggle'});
       $(".layui-footer").animate({left:'0px'});
       
-      if(side_len > 0){
+      $(".icon-arrow-mid").animate({left:'0px'});
+      if(side_len > 0 && side_hidden){
         $(".layui-side-child").animate({left:'0px'});
+        
         $(".layui-body").animate({left:'160px'});
       }else{
         $(".layui-body").animate({left:'0px'});  
@@ -161,7 +168,10 @@ layui.use('element', function(){
       $(this).animate({left:'200px'});
       $(".layui-bg-black").animate({width:'toggle'});
       $(".layui-footer").animate({left:'200px'});
-      if(side_len > 0){
+      $(".icon-arrow-mid").animate({left:'200px'});
+      console.log(side_len);
+      console.log(side_hidden);
+      if(side_len > 0 && side_hidden){
         $(".layui-side-child").animate({left:'200px'});
         $(".layui-body").animate({left:'360px'});
       }else{
@@ -175,29 +185,28 @@ layui.use('element', function(){
   $('.arrow-btn').click(function(){
     var menu_hidden = $('.layui-bg-black').css('display');
     var main_left = parseInt($('.layui-body').css('left'));
-
-     $(this).toggleClass('icon-xishuangjiantouL');
-     $(this).toggleClass('icon-xishuangjiantouR');
      
      $(".layui-side-child").animate({width:'toggle'});
+    
      if(j == 0){
-        $(this).animate({left:'0px',top:'0px'});
-        $(this).parent('div').css('border-bottom', 'none');
-        $(this).parent('div').css('border-right', 'none');
-        console.log($(this).parent('div'))
+        $('.icon-arrow-mid:eq(0)').animate({width:'toggle'}, 'normal', '', function(){
+          $('.icon-arrow-mid:eq(1)').animate({width:'toggle'});
+        });
         if(menu_hidden != 'none'){
+          $(".layui-side-child").css({left:'200px'});
           $(".layui-body").animate({left:main_left-160+'px'});
         }else{
+          $(".layui-side-child").css({left:'0px'});
           $(".layui-body").animate({left:'0px'});
         }
         j++;
      }else{
-        $(this).animate({left:'70px',top:'10px'});
-        $(this).parent('div').css('border-bottom', '1px solid #eee');
-        $(this).parent('div').css('border-right', '1px solid #eee');
+       $('.icon-arrow-mid').toggle();
         if(menu_hidden != 'none'){
+          $(".layui-side-child").css({left:'200px'});
           $(".layui-body").animate({left:main_left+160+'px'});
         }else{
+          $(".layui-side-child").css({left:'0px'});
           $(".layui-body").animate({left:'160px'});
         }
         j--;

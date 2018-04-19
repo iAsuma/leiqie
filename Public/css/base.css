@@ -7,12 +7,14 @@
 .asuma-icon-item.blue{background:#348FD5;}
 .asuma-icon-item.blue i{color:#fff}
 
-.icon-arrow-mid{left: 200px;z-index: 1000;width: 160px;height: 35px;position: relative;border-right: 1px solid #eee;border-bottom: 1px solid #eee}
-.icon-arrow-mid i{color:#bfbfbf;cursor: pointer;position: absolute;left: 70px;top:10px;}
-
+.icon-arrow-mid{left: 200px;position: relative;}
+.icon-arrow-mid i{color:#bfbfbf;cursor: pointer;}
+.icon-arrow-mid-1{width: 160px;height: 35px;border-right: 1px solid #eee;border-bottom: 1px solid #eee;z-index: 998;}
+.icon-arrow-mid-1 i{position: absolute;left: 70px;top:10px;}
+.icon-arrow-mid-2{z-index: 1000}
 
 /* 子侧边 */
-.layui-side-child{width: 160px!important; left: 200px; bottom: 60px!important; border-right: 1px solid #eee; background-color: #fff;z-index: 998;margin-top: 35px;}
+.layui-side-child{width: 160px!important; left: 200px; bottom: 60px!important; border-right: 1px solid #eee; background-color: #fff;z-index: 997;margin-top: 35px;}
 .layui-side-child .layui-side-scroll{width: 170px;}
 .layui-side-child .layui-nav{padding: 10px 0; width: 160px; border-radius: 0; background: none}
 .layui-side-child .layui-nav-child{border-radius: 0;}
@@ -40,4 +42,4 @@
 .layui-btn{background:#348FD5;}
 
 .layui-body{z-index: 999}
-.layui-container{margin: 0;padding: 20px;width: auto;background:#fff;border-left: 1px solid #eee;}
+.layui-container{margin: 0;padding: 20px 10px 20px 20px;width: auto;background:#fff;border-left: 1px solid #eee;}
