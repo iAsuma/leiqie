@@ -40,64 +40,8 @@
       <li class="layui-nav-item"><a href="">退了</a></li>
     </ul>
   </div>
-  
-  <div class="layui-side layui-bg-black">
-    <div class="layui-side-scroll">
-      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-        <li class="layui-nav-item ">
-          <a class="" href="javascript:;">所有商品</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="javascript:;">列表三</a></dd>
-            <dd><a href="">超链接</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item layui-nav-itemed">
-          <a href="javascript:;">解决方案</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="">超链接</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"><a href="">云市场</a></li>
-        <li class="layui-nav-item"><a href="">发布商品</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="asuma-icon-item">
-    <i class="iconfont icon-arrow-left"></i>
-  </div>
-
-  <style type="text/css">
-    .layui-body{overflow-y: scroll;left: 360px}
-  </style>
-  <div class="icon-arrow-mid icon-arrow-mid-1">
-    <i class="iconfont icon-xishuangjiantouL arrow-btn" ></i>
-  </div>
-  <div class="icon-arrow-mid icon-arrow-mid-2" style="display: none;">
-    <i class="iconfont icon-xishuangjiantouR arrow-btn" ></i>
-  </div>
-  <div class="layui-side layui-side-child">
-    <div class="layui-side-scroll">
-      <ul class="layui-nav layui-nav-tree">
-        <li class="layui-nav-item">
-          <a href="">ces2</a>
-        </li>
-        <li class="layui-nav-item">
-          <a href="">ces22</a>
-        </li>
-        <li class="layui-nav-item layui-this">
-          <a href="">ces224</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  
+  <include file="Public:menu"/>
   
   <div class="layui-body layui-anim layui-anim-upbit">
     <!-- 内容主体区域 -->
@@ -113,11 +57,9 @@
       
       <a href="/doc/element/layout.html#admin" target="_blank" class="layui-btn layui-btn-big">获取该布局代码</a>
       
+      <div id="demo5"></div>
       <br><br><br><br>
-      
-       
-      
-      
+
       下面是充数内容，为的是出现滚动条<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>
     </div>
   </div>
@@ -128,90 +70,18 @@
   </div>
 </div>
 <script src="__PUBLIC__/layui/layui.js" charset="utf-8"></script>
+<script src="__PUBLIC__/js/aside.js" charset="utf-8"></script>
 <script>
 //JavaScript代码区域
-layui.use('element', function(){
+layui.use(['element', 'laypage'], function(){
   var element = layui.element;
-  
 });
 </script>
 <script type="text/javascript">
   var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
-  //左侧导航栏收缩功能动画效果
-  var i = 0;
-
-  $('.asuma-icon-item').click(function(){
-    $(this).toggleClass('blue');
-    $(this).children('i').toggleClass('icon-arrow-right');
-    $(this).children('i').toggleClass('icon-arrow-left');
-
-    var side_len = $('body').find('.layui-side-child').length;
-    var side_hidden = $('body').find('.layui-side-child').is(':visible');
-
-    if(i==0){
-      $(this).animate({left:'0px'});
-      $(".layui-bg-black").animate({width:'toggle'});
-      $(".layui-footer").animate({left:'0px'});
-      
-      $(".icon-arrow-mid").animate({left:'0px'});
-      if(side_len > 0 && side_hidden){
-        $(".layui-side-child").animate({left:'0px'});
-        
-        $(".layui-body").animate({left:'160px'});
-      }else{
-        $(".layui-body").animate({left:'0px'});  
-      }
-      i++;
-    }else{
-      $(this).animate({left:'200px'});
-      $(".layui-bg-black").animate({width:'toggle'});
-      $(".layui-footer").animate({left:'200px'});
-      $(".icon-arrow-mid").animate({left:'200px'});
-      console.log(side_len);
-      console.log(side_hidden);
-      if(side_len > 0 && side_hidden){
-        $(".layui-side-child").animate({left:'200px'});
-        $(".layui-body").animate({left:'360px'});
-      }else{
-        $(".layui-body").animate({left:'200px'});
-      }
-      i--;
-    }
-  });
-
-  var j = 0;
-  $('.arrow-btn').click(function(){
-    var menu_hidden = $('.layui-bg-black').css('display');
-    var main_left = parseInt($('.layui-body').css('left'));
-     
-     $(".layui-side-child").animate({width:'toggle'});
-    
-     if(j == 0){
-        $('.icon-arrow-mid:eq(0)').animate({width:'toggle'}, 'normal', '', function(){
-          $('.icon-arrow-mid:eq(1)').animate({width:'toggle'});
-        });
-        if(menu_hidden != 'none'){
-          $(".layui-side-child").css({left:'200px'});
-          $(".layui-body").animate({left:main_left-160+'px'});
-        }else{
-          $(".layui-side-child").css({left:'0px'});
-          $(".layui-body").animate({left:'0px'});
-        }
-        j++;
-     }else{
-       $('.icon-arrow-mid').toggle();
-        if(menu_hidden != 'none'){
-          $(".layui-side-child").css({left:'200px'});
-          $(".layui-body").animate({left:main_left+160+'px'});
-        }else{
-          $(".layui-side-child").css({left:'0px'});
-          $(".layui-body").animate({left:'160px'});
-        }
-        j--;
-     }
-  })
+  
 </script>
 </body>
 </html>
