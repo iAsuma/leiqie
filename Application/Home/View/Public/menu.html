@@ -1,55 +1,57 @@
+<!-- 左侧导航部分，用于一二级菜单 -->
 <div class="layui-side layui-bg-black">
-    <div class="layui-side-scroll">
-      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-        <li class="layui-nav-item ">
-          <a class="" href="javascript:;">所有商品</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="javascript:;">列表三</a></dd>
-            <dd><a href="">超链接</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item layui-nav-itemed">
-          <a href="javascript:;">解决方案</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="">超链接</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"><a href="">云市场</a></li>
-        <li class="layui-nav-item"><a href="">发布商品</a></li>
-      </ul>
-    </div>
+  <div class="layui-side-scroll">
+    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+    <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+      <li class="layui-nav-item ">
+        <a class="" href="javascript:;">所有商品</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">列表一</a></dd>
+          <dd><a href="javascript:;">列表二</a></dd>
+          <dd><a href="javascript:;">列表三</a></dd>
+          <dd><a href="">超链接</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item layui-nav-itemed">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">列表一</a></dd>
+          <dd><a href="javascript:;">列表二</a></dd>
+          <dd><a href="">超链接</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">云市场</a></li>
+      <li class="layui-nav-item"><a href="">发布商品</a></li>
+    </ul>
   </div>
+</div>
 
-  <div class="asuma-icon-item">
-    <i class="iconfont icon-arrow-left"></i>
-  </div>
+<div class="asuma-icon-item">
+  <i class="iconfont icon-arrow-left"></i>
+</div>
 
-  <style type="text/css">
-    .layui-body{overflow-y: scroll;left: 360px}
-  </style>
-  <div class="icon-arrow-mid icon-arrow-mid-1">
-    <i class="iconfont icon-xishuangjiantouL arrow-btn" ></i>
+<!-- 三级菜单，当存在三级菜单的时候才会显示 -->
+<style type="text/css">
+  .layui-body{overflow-y: scroll;left: 360px}
+</style>
+<div class="icon-arrow-mid icon-arrow-mid-1">
+  <i class="iconfont icon-xishuangjiantouL arrow-btn" ></i>
+</div>
+<div class="icon-arrow-mid icon-arrow-mid-2" style="display: none;">
+  <i class="iconfont icon-xishuangjiantouR arrow-btn" ></i>
+</div>
+<div class="layui-side layui-side-child">
+  <div class="layui-side-scroll">
+    <ul class="layui-nav layui-nav-tree">
+      <li class="layui-nav-item">
+        <a href="">ces2</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="">ces22</a>
+      </li>
+      <li class="layui-nav-item layui-this">
+        <a href="">ces224</a>
+      </li>
+    </ul>
   </div>
-  <div class="icon-arrow-mid icon-arrow-mid-2" style="display: none;">
-    <i class="iconfont icon-xishuangjiantouR arrow-btn" ></i>
-  </div>
-  <div class="layui-side layui-side-child">
-    <div class="layui-side-scroll">
-      <ul class="layui-nav layui-nav-tree">
-        <li class="layui-nav-item">
-          <a href="">ces2</a>
-        </li>
-        <li class="layui-nav-item">
-          <a href="">ces22</a>
-        </li>
-        <li class="layui-nav-item layui-this">
-          <a href="">ces224</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+</div>
