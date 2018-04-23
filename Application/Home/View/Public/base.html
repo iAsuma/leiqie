@@ -43,9 +43,9 @@
 
   <include file="Public:menu"/>
   
-  <div class="layui-body layui-anim layui-anim-upbit">
+  <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div class="layui-container">
+    <div class="layui-container layui-anim layui-anim-upbit">
       
       内容主体区域
       
@@ -98,7 +98,24 @@ layui.use(['element', 'laypage'], function(){
   var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
+  $('a').click(function(e){
+    e.preventDefault();
+    $.post(this.href,{},function(data){
+      $('.layui-body').html('<div class="layui-container layui-anim layui-anim-upbit">'+data+'</div>')
+    })
+    window.history.pushState('', '', this.href);
+    //return false;
+  });
+
+  var i = 0;
+
+  window.onpopstate = function(e){
+    console.log(e)
+    window.history.back();
+    //console.log(i++);
+  }
   
 </script>
 </body>
 </html>
+
