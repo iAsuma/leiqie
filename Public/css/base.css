@@ -43,5 +43,6 @@
 /*.layui-form-select dl dd.layui-this{background:#348FD5}*/
 .layui-btn{background:#348FD5;}
 
-.layui-body{z-index: 999}
-.layui-container{margin: 0;padding: 20px 10px 20px 20px;width: auto;background:#fff;border-left: 1px solid #eee;}
+.layui-body{z-index: 999;}
+.layui-container{margin: 0;padding: 20px 10px 20px 20px;width: auto;background:#fff;border-left: 1px solid #eee;height: 100%}
+.layui-side-child{bottom: 44px !important;}

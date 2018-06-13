@@ -9,6 +9,6 @@ class GateController extends Controller
 	
 	public function _initialize()
 	{
-		//echo 'quanxian';die;
+		
 	}
 }
