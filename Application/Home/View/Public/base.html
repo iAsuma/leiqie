@@ -50,7 +50,7 @@
     <!-- 内容主体区域 -->
     <div class="layui-container layui-anim layui-anim-upbit layui-tab layui-tab-brief" lay-filter="demo" lay-allowclose="true">
 
-        <ul class="layui-tab-title" style="display: none;">
+        <ul class="layui-tab-title" >
     <li class="layui-this" lay-id="11">网站设置</li>
     <li lay-id="22">用户管理</li>
     <li lay-id="33">权限分配</li>
@@ -64,31 +64,7 @@
     <div class="layui-tab-item">内容4</div>
     <div class="layui-tab-item">内容5</div>
   </div>
-      内容主体区域
 
-      <br><br>
-      <blockquote class="layui-elem-quote">
-        layui 之所以赢得如此多人的青睐，更多是在于它“前后台系统通吃”的能力。既可编织出绚丽的前台页面，又可满足繁杂的后台功能需求。
-        <br>layui 后台布局， 致力于让每一位开发者都能轻松搭建自己的后台模板。
-      </blockquote>
-      
-      <a href="/doc/element/layout.html#admin" target="_blank" class="layui-btn layui-btn-big">获取该布局代码</a>
-      
-      <div id="test1"></div>
-            <button type="button" class="layui-btn" id="test2">
-  <i class="layui-icon">&#xe67c;</i>上传图片
-</button>
-      <br><br><br><br>
-
-      <div class="" lay-filter="">
-
-</div>
-
-<div class="site-demo-button" style="margin-bottom: 0;">
-  <button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
-  <button class="layui-btn site-demo-active" data-type="tabDelete">删除：商品管理</button>
-  <button class="layui-btn site-demo-active" data-type="tabChange">切换到：用户管理</button>
-</div>
 
     </div>
   </div>
@@ -118,7 +94,7 @@ layui.use(['element', 'laypage'], function(){
     var id = new Date().getTime()
     element.tabAdd('demo', {
         title: '新选项'+ (Math.random()*1000|0) //用于演示
-        ,content: '内容'+ (Math.random()*1000|0)
+        ,content: '<iframe src="{:U(\'menu1\')}" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>'
         ,id: id //实际使用一般是规定好的id，这里以时间戳模拟下
       })
 
